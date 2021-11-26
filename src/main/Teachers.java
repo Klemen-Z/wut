@@ -10,11 +10,11 @@ public class Teachers {
     private String LastName;
     private String PhoneNumber;
 
-    private String[] lastNames = new String[6];
-    private String[] firstNames = new String[6];
-    private String[] classes = new String[3];
-    private String[] phoneNums = new String[6];
-    private int[] ages = new int[3];
+    private final String[] lastNames = new String[6];
+    private final String[] firstNames = new String[6];
+    private final String[] classes = new String[3];
+    private final String[] phoneNums = new String[6];
+    private final int[] ages = new int[3];
 
     Random r = new Random();
 
@@ -69,67 +69,66 @@ public class Teachers {
     }
 
     public String RandomPhoneNum(){
-        int[] areacode = new int[41];
+        int[] areaCode = new int[41];
 
-        areacode[0] = 21;
-        areacode[1] = 22;
-        areacode[2] = 24;
-        areacode[3] = 26;
-        areacode[4] = 27;
-        areacode[5] = 31;
-        areacode[6] = 33;
-        areacode[7] = 34;
-        areacode[8] = 41;
-        areacode[9] = 43;
-        areacode[10] = 44;
-        areacode[11] = 51;
-        areacode[12] = 52;
-        areacode[13] = 55;
-        areacode[14] = 56;
-        areacode[15] = 58;
-        areacode[16] = 61;
-        areacode[17] = 62;
-        areacode[18] = 71;
-        areacode[19] = 74;
-        areacode[20] = 76;
-        areacode[21] = 77;
-        areacode[22] = 78;
-        areacode[23] = 79;
-        areacode[24] = 800;
-        areacode[25] = 81;
-        areacode[26] = 840;
-        areacode[27] = 842;
-        areacode[28] = 844;
-        areacode[29] = 848;
-        areacode[30] = 860;
-        areacode[31] = 868;
-        areacode[32] = 869;
-        areacode[33] = 878;
-        areacode[34] = 900;
-        areacode[35] = 901;
-        areacode[36] = 906;
-        areacode[37] = 91;
-        areacode[38] = 98;
-        areacode[39] = 99;
+        areaCode[0] = 21;
+        areaCode[1] = 22;
+        areaCode[2] = 24;
+        areaCode[3] = 26;
+        areaCode[4] = 27;
+        areaCode[5] = 31;
+        areaCode[6] = 33;
+        areaCode[7] = 34;
+        areaCode[8] = 41;
+        areaCode[9] = 43;
+        areaCode[10] = 44;
+        areaCode[11] = 51;
+        areaCode[12] = 52;
+        areaCode[13] = 55;
+        areaCode[14] = 56;
+        areaCode[15] = 58;
+        areaCode[16] = 61;
+        areaCode[17] = 62;
+        areaCode[18] = 71;
+        areaCode[19] = 74;
+        areaCode[20] = 76;
+        areaCode[21] = 77;
+        areaCode[22] = 78;
+        areaCode[23] = 79;
+        areaCode[24] = 800;
+        areaCode[25] = 81;
+        areaCode[26] = 840;
+        areaCode[27] = 842;
+        areaCode[28] = 844;
+        areaCode[29] = 848;
+        areaCode[30] = 860;
+        areaCode[31] = 868;
+        areaCode[32] = 869;
+        areaCode[33] = 878;
+        areaCode[34] = 900;
+        areaCode[35] = 901;
+        areaCode[36] = 906;
+        areaCode[37] = 91;
+        areaCode[38] = 98;
+        areaCode[39] = 99;
 
         String temps;
-        String temp = "";
+        StringBuilder temp = new StringBuilder(areaCode[r.nextInt(39)] + " ");
 
-        temp = String.valueOf(areacode[r.nextInt(39)]) + " ";
         for (int i = 0; i < 3; i++){
             temps = String.valueOf(r.nextInt(9));
-            temp = temp + temps;
+            temp.append(temps);
         }
-        temp = temp + " ";
+        temp.append(" ");
         for (int j = 0; j < 2; j++){
             for (int i = 0; i < 2; i++){
                 temps = String.valueOf(r.nextInt(9));
-                temp = temp + temps;
+                temp.append(temps);
             }
-            temp = temp + " ";
+            temp.append(" ");
         }
 
-        return temp;
+        return temp.toString();
     }
 
     public int getAge() {
