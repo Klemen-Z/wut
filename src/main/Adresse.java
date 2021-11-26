@@ -27,7 +27,7 @@ public class Adresse {
         log.setWritable(true);
     }
 
-    public Adresse() throws IOException {
+    Adresse() throws IOException {
         createlog();
         System.out.println("Name bitte: ");
         setName(sc1.nextLine());
