@@ -1,4 +1,4 @@
-package main;
+package main.Credit_Suisse;
 import java.util.Random;
 import java.util.Scanner;
 public class Credit_Card {

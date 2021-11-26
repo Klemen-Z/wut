@@ -1,4 +1,7 @@
-package main;
+package main.School;
+
+import main.School.Students;
+import main.School.Teachers;
 
 public class Test {
     public static void main(String[] args) {

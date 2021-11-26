@@ -1,8 +1,8 @@
-package main;
+package main.School;
 
 import java.util.Random;
 
-public class Students {
+public class Teachers {
 
     private int Age;
     private String sClass;
@@ -18,7 +18,7 @@ public class Students {
 
     Random r = new Random();
 
-    Students(){
+    Teachers(){
         fillAges();
         fillClasses();
         fillFNames();
@@ -30,10 +30,10 @@ public class Students {
         setLastName(r.nextInt(5));
         setsClass(r.nextInt(2));
         setPhoneNumber(r.nextInt(5));
-        System.out.println("Student:" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber());
+        System.out.println("Teacher" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber());
     }
 
-    Students(String FName, String LName, int age, String Classes){
+    Teachers(String FName, String LName, int age, String Classes){
         fillAges();
         fillClasses();
         fillFNames();
@@ -49,9 +49,9 @@ public class Students {
     }
 
     private void fillAges() {
-        ages[0] = 15;
-        ages[1] = 14;
-        ages[2] = 16;
+        ages[0] = 30;
+        ages[1] = 32;
+        ages[2] = 28;
     }
     private void fillClasses() {
         classes[0] = "I2b";
@@ -84,7 +84,7 @@ public class Students {
     }
 
     public String RandomPhoneNum(){
-        int[] areaCode = new int[40];
+        int[] areaCode = new int[41];
 
         areaCode[0] = 21;
         areaCode[1] = 22;
@@ -136,12 +136,13 @@ public class Students {
         }
         temp.append(" ");
         for (int j = 0; j < 2; j++){
-            for(int i = 0; i < 2; i++){
+            for (int i = 0; i < 2; i++){
                 temps = String.valueOf(r.nextInt(9));
                 temp.append(temps);
             }
             temp.append(" ");
         }
+
         return temp.toString();
     }
 
