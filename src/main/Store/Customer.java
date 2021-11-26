@@ -8,7 +8,9 @@ public class Customer {
     private String FirstName;
     private String LastName;
     private String PhoneNumber;
+    private String Address;
 
+    private final String[] Addresses = new String[3];
     private final String[] lastNames = new String[6];
     private final String[] firstNames = new String[6];
     private final String[] phoneNums = new String[6];
@@ -16,10 +18,12 @@ public class Customer {
     Random r = new Random();
 
     Customer(int custID){
+        fillAddresses();
         fillFNames();
         fillLNames();
         fillPhoneNums();
 
+        setAddress(Addresses[r.nextInt(2)]);
         setFirstName(r.nextInt(5));
         setLastName(r.nextInt(5));
         setPhoneNumber(r.nextInt(5));
@@ -37,6 +41,11 @@ public class Customer {
         setCustID(custID);
     }
 
+    private void fillAddresses() {
+        Addresses[0] = "Freierstrasse 12 4052";
+        Addresses[1] = "Dornacherstrasse 22 4055";
+        Addresses[2] = "Freibuergerstrasse 2 4050";
+    }
     private void fillFNames() {
         firstNames[0] = "Lucas";
         firstNames[1] = "Alex";
@@ -163,5 +172,13 @@ public class Customer {
 
     public void setPhoneNumber(int index) {
         this.PhoneNumber = phoneNums[index];
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
     }
 }
