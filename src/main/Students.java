@@ -33,6 +33,21 @@ public class Students {
         System.out.println("Student:" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber());
     }
 
+    Students(String FName, String LName, int age, String Classes){
+        fillAges();
+        fillClasses();
+        fillFNames();
+        fillLNames();
+        fillPhoneNums();
+
+        setAgee(age);
+        setFirstNamee(FName);
+        setLastNamee(LName);
+        setsClasse(Classes);
+        setPhoneNumber(r.nextInt(5));
+        System.out.println("Student:" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber());
+    }
+
     private void fillAges() {
         ages[0] = 15;
         ages[1] = 14;
@@ -149,6 +164,24 @@ public class Students {
     public String getsClass() {
         return sClass;
     }
+
+
+    public void setAgee(int age) {
+        this.Age = age;
+    }
+
+    public void setFirstNamee(String FName) {
+        this.FirstName = FName;
+    }
+
+    public void setLastNamee(String LName) {
+        this.LastName = LName;
+    }
+
+    public void setsClasse(String Classes) {
+        this.sClass = Classes;
+    }
+
 
     public void setAge(int index) {
         this.Age = ages[index];
