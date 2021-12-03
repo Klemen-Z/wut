@@ -9,7 +9,7 @@ public class ProCust {
         Random r = new Random();
         Customer c1 = new Customer(Cust_ID_Manager.newCustID());
         Product p1 = new Product(P_ID_Manager.newProductNo(), r.nextInt(100));
-        Customer c2 = new Customer(Cust_ID_Manager.newCustID());
+        Customer c2 = new Customer("John", "Cunt", Cust_ID_Manager.newCustID());
         Product p2 = new Product(P_ID_Manager.newProductNo(), r.nextInt(100));
 
         System.out.println("\nCustomer:\n" + "Customer id: " + c1.getCustID() + "\n" + "Customer name: " + c1.getFirstName() + " " + c1.getLastName() + "\n" + "Customer PhoneNum: " + c1.getPhoneNumber() + "\n" + "Address: " + c1.getAddress());
