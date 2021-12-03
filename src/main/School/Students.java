@@ -9,6 +9,7 @@ public class Students {
     private String FirstName;
     private String LastName;
     private String PhoneNumber;
+    private int social_credit;
 
     private final String[] lastNames = new String[6];
     private final String[] firstNames = new String[6];
@@ -30,7 +31,8 @@ public class Students {
         setLastName(r.nextInt(5));
         setsClass(r.nextInt(2));
         setPhoneNumber(r.nextInt(5));
-        System.out.println("Student:" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber());
+        setSocial_credit(1000);
+        System.out.println("Student:" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber() + "\n" + "Social credit: " + getSocial_credit());
     }
 
     Students(String FName, String LName, int age, String Classes){
@@ -45,7 +47,8 @@ public class Students {
         setLastNamee(LName);
         setsClasse(Classes);
         setPhoneNumber(r.nextInt(5));
-        System.out.println("Student:" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber());
+        setSocial_credit(1000);
+        System.out.println("Student:" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber() + "\n" + "Social credit: " + getSocial_credit());
     }
 
     private void fillAges() {
@@ -145,6 +148,10 @@ public class Students {
         return temp.toString();
     }
 
+    public int getSocial_credit() {
+        return social_credit;
+    }
+
     public int getAge() {
         return Age;
     }
@@ -182,6 +189,10 @@ public class Students {
         this.sClass = Classes;
     }
 
+
+    public void setSocial_credit(int social_credit) {
+        this.social_credit = social_credit;
+    }
 
     public void setAge(int index) {
         this.Age = ages[index];
