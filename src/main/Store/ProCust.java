@@ -17,4 +17,5 @@ public class ProCust {
         System.out.println("\nProduct:\n" + "Product Num: " + p1.getItemNo() + "\n" + "Product name: " + p1.getName() + "\n" + "Product price: " + p1.getPrice() + "\n" + "Product quantity: " + p1.getQty() + "\n" + "Total: " + p1.getQty()*p1.getPrice());
         System.out.println("\nProduct:\n" + "Product Num: " + p2.getItemNo() + "\n" + "Product name: " + p2.getName() + "\n" + "Product price: " + p2.getPrice() + "\n" + "Product quantity: " + p2.getQty() + "\n" + "Total: " + p2.getQty()*p2.getPrice());
     }
+    String[] Arraylist = new String[1];
 }
