@@ -8,13 +8,16 @@ public class Test {
     static HashMap<Integer, Student> Students = new HashMap<>();
 
     public static void fillT(){
-        Teachers.put(1, new Teacher());
-        Teachers.put(2, new Teacher("Veronica", "McCarthy", 30, "I2b"));
+        Teachers.put(0, new Teacher());
+        Teachers.put(1, new Teacher("Veronica", "McCarthy", 30, "I2b"));
     }
     public static void fillS(){
-        Students.put(1, new Student());
-        Students.put(2, new Student("Anne", "Tower", 15, "I2b"));
-        Students.put(3, new Student());
+        int b = 5;
+        Students.put(0, new Student());
+        Students.put(1, new Student("Anne", "Tower", 15, "I2b"));
+        for (int i = 2; i < b; i++){
+            Students.put(i, new Student());
+        }
     }
 
     public static Teacher Teacher(int HashmapKey){
