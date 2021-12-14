@@ -2,7 +2,7 @@ package main.School;
 
 import java.util.Random;
 
-public class Teachers {
+public class Student {
 
     private int Age;
     private String sClass;
@@ -19,7 +19,7 @@ public class Teachers {
 
     Random r = new Random();
 
-    Teachers(){
+    Student(){
         fillAges();
         fillClasses();
         fillFNames();
@@ -32,10 +32,9 @@ public class Teachers {
         setsClass(r.nextInt(2));
         setPhoneNumber(r.nextInt(5));
         setSocial_credit(1000);
-        System.out.println("Teacher" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber() + "\n" + "Social credit: " + getSocial_credit());
     }
 
-    Teachers(String FName, String LName, int age, String Classes){
+    Student(String FName, String LName, int age, String Classes){
         fillAges();
         fillClasses();
         fillFNames();
@@ -48,13 +47,12 @@ public class Teachers {
         setsClasse(Classes);
         setPhoneNumber(r.nextInt(5));
         setSocial_credit(1000);
-        System.out.println("Student:" + "\n" + "Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Age: " + getAge() + "\n" + "Class: " + getsClass() + "\n" + "Phone Number: " + getPhoneNumber() + "\n" + "Social credit: " + getSocial_credit());
     }
 
     private void fillAges() {
-        ages[0] = 30;
-        ages[1] = 32;
-        ages[2] = 28;
+        ages[0] = 15;
+        ages[1] = 14;
+        ages[2] = 16;
     }
     private void fillClasses() {
         classes[0] = "I2b";
@@ -87,7 +85,7 @@ public class Teachers {
     }
 
     public String RandomPhoneNum(){
-        int[] areaCode = new int[41];
+        int[] areaCode = new int[40];
 
         areaCode[0] = 21;
         areaCode[1] = 22;
@@ -139,22 +137,21 @@ public class Teachers {
         }
         temp.append(" ");
         for (int j = 0; j < 2; j++){
-            for (int i = 0; i < 2; i++){
+            for(int i = 0; i < 2; i++){
                 temps = String.valueOf(r.nextInt(9));
                 temp.append(temps);
             }
             temp.append(" ");
         }
-
         return temp.toString();
-    }
-
-    public int getAge() {
-        return Age;
     }
 
     public int getSocial_credit() {
         return social_credit;
+    }
+
+    public int getAge() {
+        return Age;
     }
 
     public String getFirstName() {
