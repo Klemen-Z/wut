@@ -73,6 +73,5 @@ public class Test {
 
         allTeacher();
         allStudent();
-
     }
 }
