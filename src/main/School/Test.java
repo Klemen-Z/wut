@@ -23,7 +23,7 @@ public class Test {
             t = Teachers.get(HashmapKey);
         }
         catch(Error e){
-            System.out.println("Object doesnt exist");
+            System.out.println("Teacher doesnt exist");
         }
         return t;
     }
@@ -33,7 +33,7 @@ public class Test {
             s = Students.get(HashmapKey);
         }
         catch(Error e){
-            System.out.println("Object doesnt exist");
+            System.out.println("Student doesnt exist");
         }
         return s;
     }
