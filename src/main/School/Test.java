@@ -5,29 +5,35 @@ import java.util.Random;
 
 public class Test {
 
-    static HashMap<Integer, Teacher> Teachers = new HashMap<>();
-    static HashMap<Integer, Student> Students = new HashMap<>();
+    HashMap<Integer, Teacher> Teachers = new HashMap<>();
+    HashMap<Integer, Student> Students = new HashMap<>();
 
-    public static void fillT(){
+    Test(){
+        fillS(); fillT();
+    }
+
+    public void fillT(){
         Random r = new Random();
         int b = r.nextInt(10);
-        Teachers.put(0, new Teacher());
-        Teachers.put(1, new Teacher("Veronica", "McCarthy", 30, "I2b"));
-        for (int i = 2; i < b; i++){
+        while(b == 0){
+            b = r.nextInt(10);
+        }
+        for (int i = 0; i < b; i++){
             Teachers.put(i, new Teacher());
         }
     }
-    public static void fillS(){
+    public void fillS(){
         Random r = new Random();
         int b = r.nextInt(10);
-        Students.put(0, new Student());
-        Students.put(1, new Student("Anne", "Tower", 15, "I2b"));
-        for (int i = 2; i < b; i++){
+        while(b == 0){
+            b = r.nextInt(10);
+        }
+        for (int i = 0; i < b; i++){
             Students.put(i, new Student());
         }
     }
 
-    public static void getHashSize(boolean Teacher, boolean Student){
+    public void getHashSize(boolean Teacher, boolean Student){
         if (Teacher && Student){
             System.out.println("\nTeacher Count: " + Teachers.size());
             System.out.println("Student Count: " + Students.size());
@@ -40,14 +46,14 @@ public class Test {
         }
     }
 
-    public static void allTeacher(){
+    public void allTeacher(){
         for(Teacher Teacher : Teachers.values()){
             System.out.println("\nTeacher: ");
             System.out.println(Teacher.getFirstName());
             System.out.println(Teacher.getLastName());
         }
     }
-    public static void allStudent(){
+    public void allStudent(){
         for(Student Student : Students.values()){
             System.out.println("\nStudent: ");
             System.out.println(Student.getFirstName());
@@ -55,7 +61,7 @@ public class Test {
         }
     }
 
-    public static Teacher Teacher(Integer HashmapKey){
+    public Teacher Teacher(Integer HashmapKey){
         Teacher t = null;
         try{
             t = Teachers.get(HashmapKey);
@@ -65,7 +71,7 @@ public class Test {
         }
         return t;
     }
-    public static Student Student(Integer HashmapKey){
+    public Student Student(Integer HashmapKey){
         Student s = null;
         try{
             s = Students.get(HashmapKey);
@@ -77,19 +83,14 @@ public class Test {
     }
 
     public static void main(String[] args) {
+        Test test1 = new Test();
 
-        fillT();
-        fillS();
-
-        Teacher t = Teacher(1);
-        Student s = Student(1);
-
-        if (t != null) System.out.println("Teacher: \n" + t.getFirstName() + "\n ");
-        if (t != null) System.out.println("Student: \n" + s.getFirstName() + "\n ");
-
-        allTeacher();
-        allStudent();
-
-        getHashSize(true, true);
+        test1.getHashSize(true, true);
+        Teacher T = test1.Teacher(0);
+        Student S = test1.Student(0);
+        System.out.println("\n\nHeadteacher: " + T.getFirstName() + " " + T.getLastName());
+        test1.allTeacher();
+        System.out.println("\n\nBest Student: " + S.getFirstName() + " " + S.getLastName());
+        test1.allStudent();
     }
 }
