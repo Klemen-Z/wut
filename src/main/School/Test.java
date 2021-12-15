@@ -1,6 +1,7 @@
 package main.School;
 
 import java.util.HashMap;
+import java.util.Random;
 
 public class Test {
 
@@ -8,7 +9,8 @@ public class Test {
     static HashMap<Integer, Student> Students = new HashMap<>();
 
     public static void fillT(){
-        int b = 5;
+        Random r = new Random();
+        int b = r.nextInt(10);
         Teachers.put(0, new Teacher());
         Teachers.put(1, new Teacher("Veronica", "McCarthy", 30, "I2b"));
         for (int i = 2; i < b; i++){
@@ -16,7 +18,8 @@ public class Test {
         }
     }
     public static void fillS(){
-        int b = 5;
+        Random r = new Random();
+        int b = r.nextInt(10);
         Students.put(0, new Student());
         Students.put(1, new Student("Anne", "Tower", 15, "I2b"));
         for (int i = 2; i < b; i++){
