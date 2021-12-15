@@ -35,12 +35,12 @@ public class Test {
 
     public void getHashSize(boolean Teacher, boolean Student){
         if (Teacher && Student){
-            System.out.println("\nTeacher Count: " + Teachers.size());
-            System.out.println("Student Count: " + Students.size());
+            System.out.println("\nAmount of teachers: " + Teachers.size());
+            System.out.println("Amount of students: " + Students.size());
         }else if(Teacher){
-            System.out.println("\nTeacher Count: " + Teachers.size());
+            System.out.println("\nAmount of teachers: " + Teachers.size());
         }else if(Student){
-            System.out.println("\nStudent Count: " + Students.size());
+            System.out.println("\nAmount of students: " + Students.size());
         }else{
             System.out.println("\nPlease pick one to count");
         }
@@ -85,12 +85,13 @@ public class Test {
     public static void main(String[] args) {
         Test test1 = new Test();
 
-        test1.getHashSize(true, true);
         Teacher T = test1.Teacher(0);
         Student S = test1.Student(0);
         System.out.println("\n\nHeadteacher: " + T.getFirstName() + " " + T.getLastName());
         test1.allTeacher();
+        test1.getHashSize(true, false);
         System.out.println("\n\nBest Student: " + S.getFirstName() + " " + S.getLastName());
         test1.allStudent();
+        test1.getHashSize(false, true);
     }
 }
