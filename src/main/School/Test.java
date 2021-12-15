@@ -24,6 +24,19 @@ public class Test {
         }
     }
 
+    public static void getHashSize(boolean Teacher, boolean Student){
+        if (Teacher && Student){
+            System.out.println("Teacher Count: " + Teachers.size());
+            System.out.println("Student Count: " + Students.size());
+        }else if(Teacher){
+            System.out.println("Teacher Count: " + Teachers.size());
+        }else if(Student){
+            System.out.println("Student Count: " + Students.size());
+        }else{
+            System.out.println("Please pick one");
+        }
+    }
+
     public static void allTeacher(){
         for(Teacher Teacher : Teachers.values()){
             System.out.println("Teacher: ");
@@ -73,5 +86,7 @@ public class Test {
 
         allTeacher();
         allStudent();
+
+        getHashSize(true, true);
     }
 }
