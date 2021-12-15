@@ -39,14 +39,14 @@ public class Test {
 
     public static void allTeacher(){
         for(Teacher Teacher : Teachers.values()){
-            System.out.println("Teacher: ");
+            System.out.println("\nTeacher: ");
             System.out.println(Teacher.getFirstName());
             System.out.println(Teacher.getLastName());
         }
     }
     public static void allStudent(){
         for(Student Student : Students.values()){
-            System.out.println("Student: ");
+            System.out.println("\nStudent: ");
             System.out.println(Student.getFirstName());
             System.out.println(Student.getLastName());
         }
