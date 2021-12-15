@@ -52,7 +52,7 @@ public class Test {
         }
     }
 
-    public static Teacher Teacher(int HashmapKey){
+    public static Teacher Teacher(Integer HashmapKey){
         Teacher t = null;
         try{
             t = Teachers.get(HashmapKey);
@@ -62,7 +62,7 @@ public class Test {
         }
         return t;
     }
-    public static Student Student(int HashmapKey){
+    public static Student Student(Integer HashmapKey){
         Student s = null;
         try{
             s = Students.get(HashmapKey);
