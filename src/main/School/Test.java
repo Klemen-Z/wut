@@ -33,7 +33,7 @@ public class Test {
         }else if(Student){
             System.out.println("\nStudent Count: " + Students.size());
         }else{
-            System.out.println("\nPlease pick one");
+            System.out.println("\nPlease pick one to count");
         }
     }
 
