@@ -18,6 +18,7 @@ public class Race {
     Race(String name){
         setName(name);
         System.out.println("Welcome to the " + getName() + "");
+        System.out.println("The competing ships are: ");
         fillNames();
         generateShips();
         getAllShips();
