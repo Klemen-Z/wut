@@ -13,10 +13,10 @@ public class Adresse {
     private String Ort;
 
     Scanner sc1 = new Scanner(System.in);
-    File log = new File("log.txt");
+    File log = new File("main/log.txt");
     FileWriter writer = new FileWriter("log.txt");
 
-    public void createlog() throws IOException {
+    Adresse() throws IOException {
         if (!log.exists()){
             log.createNewFile();
         }
@@ -25,10 +25,6 @@ public class Adresse {
             log.createNewFile();
         }
         log.setWritable(true);
-    }
-
-    Adresse() throws IOException {
-        createlog();
         System.out.println("Name bitte: ");
         setName(sc1.nextLine());
         sc1.reset();
@@ -44,17 +40,13 @@ public class Adresse {
         System.out.println("ZIP bitte: ");
         setZip(sc1.nextInt());
         sc1.close();
-        leaveProtocol();
+        System.out.println("Name: " + getName() + " " + getVorname() + "\n" + "Strasse: " + getStrasse() + "\n" + "Ort: " + getOrt() + "\n" + "ZIP: " + getZip());
+        writer.write("Name: " + getName() + "\n" + "Vorname: " + getVorname() + "\n" + "Strasse: " + getStrasse() + "\n" + "Ort: " + getOrt() + "\n" + "ZIP: " + getZip());
+        writer.close();
     }
 
     public static void main(String[] args) throws IOException {
         Adresse adresse = new Adresse();
-    }
-
-    public void leaveProtocol() throws IOException {
-        System.out.println("Name: " + getName() + " " + getVorname() + "\n" + "Strasse: " + getStrasse() + "\n" + "Ort: " + getOrt() + "\n" + "ZIP: " + getZip());
-        writer.write("Name: " + getName() + "\n" + "Vorname: " + getVorname() + "\n" + "Strasse: " + getStrasse() + "\n" + "Ort: " + getOrt() + "\n" + "ZIP: " + getZip());
-        writer.close();
     }
 
     public int getZip() {
