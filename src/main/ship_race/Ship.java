@@ -4,14 +4,16 @@ import java.util.Random;
 
 public class Ship {
 
+    Owner Owner = new Owner("Bob", "Cunt", "Freierstrasse 10");
     Random r = new Random();
 
     private String name;
     private int timeS;
     private int nr;
+    private Owner owner;
 
     Ship(int nr, String name){
-           setName(name); setNr(nr);
+           setName(name); setNr(nr); setOwner(Owner);
     }
     public int timeForRace(){
         int time = r.nextInt(600);
@@ -28,6 +30,14 @@ public class Ship {
 
     public int getTimeS() {
         return timeS;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
+
+    public Owner getOwner() {
+        return owner;
     }
 
     public String getName() {
