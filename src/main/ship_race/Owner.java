@@ -1,35 +1,35 @@
 package main.ship_race;
 
 public class Owner {
-    private String Lastname;
-    private String Firstname;
-    private String Address;
+    private String lastname;
+    private String firstname;
+    private String address;
 
     Owner( String Firstname, String Lastname, String Address){
         setAddress(Address); setFirstname(Firstname); setLastname(Lastname);
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public String getFirstname() {
-        return Firstname;
+        return firstname;
     }
 
     public String getLastname() {
-        return Lastname;
+        return lastname;
     }
 
     public void setFirstname(String firstname) {
-        Firstname = firstname;
+        this.firstname = firstname;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public void setLastname(String lastname) {
-        Lastname = lastname;
+        this.lastname = lastname;
     }
 }
