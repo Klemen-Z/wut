@@ -2,7 +2,7 @@ package main.ship_race;
 
 import java.util.Random;
 
-public class Ship {
+public class Ship implements Comparable<Ship>{
 
     Owner Owner = new Owner("Bob", "Cunt", "Freierstrasse 10");
     Random r = new Random();
@@ -15,13 +15,13 @@ public class Ship {
     Ship(int nr, String name){
            setName(name); setNr(nr); setOwner(Owner);
     }
-    public int timeForRace(){
+    public String timeForRace(){
         int time = r.nextInt(600);
         while (time < 300){
             time = r.nextInt(600);
         }
         setTimeS(time);
-        return time;
+        return String.valueOf(time);
     }
 
     public int getNr() {
@@ -54,5 +54,10 @@ public class Ship {
 
     public void setTimeS(int timeS) {
         this.timeS = timeS;
+    }
+
+    @Override
+    public int compareTo(Ship o) {
+        return this.timeS - o.timeS;
     }
 }

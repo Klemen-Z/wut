@@ -1,10 +1,8 @@
 package main.ship_race;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
+import java.util.*;
 
-public class Race {
+public class Race implements Comparable<Ship>{
 
     Random r = new Random();
 
@@ -13,9 +11,9 @@ public class Race {
     ArrayList<String> ShipNames = new ArrayList<>();
 
     HashMap<Integer, Ship> Ships = new HashMap<>();
-    HashMap<Integer, Integer> ShipTime = new HashMap<>();
+    HashMap<String, String> ShipTime = new HashMap<>();
 
-    Race(String name){
+    Race(String name) {
         setName(name);
         System.out.println("Welcome to the " + getName() + "");
         System.out.println("The competing ships are: ");
@@ -23,6 +21,7 @@ public class Race {
         generateShips();
         getAllShips();
         start();
+        getWinners();
     }
 
     public void fillNames(){
@@ -39,13 +38,21 @@ public class Race {
         }
     }
     public void start(){
-        int i = 1;
         for(Ship ship: Ships.values()){
-            ShipTime.put(i ,ship.timeForRace());
+            ShipTime.put(ship.getName() ,ship.timeForRace());
+        }
+    }
+    public void getWinners(){
+        int i = 1;
+        SortedSet<Ship> orderOfWinners = new TreeSet<>(Ships.values());
+        System.out.println(" ");
+        System.out.println("The winners are: ");
+        for (Ship ship: orderOfWinners) {
+            System.out.println(i + " " + ship.getName());
+            System.out.println("  Time (seconds): " + ship.getTimeS());
             i++;
         }
     }
-
     public String namePick(){
         String name;
         int index;
@@ -73,5 +80,10 @@ public class Race {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(Ship o) {
+        return 0;
     }
 }
