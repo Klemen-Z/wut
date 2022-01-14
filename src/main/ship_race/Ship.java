@@ -17,7 +17,7 @@ public class Ship implements Comparable<Ship>{
     }
     public String timeForRace(){
         int time = r.nextInt(600);
-        while (time < 300){
+        while (time =< 300){
             time = r.nextInt(600);
         }
         setTimeS(time);
