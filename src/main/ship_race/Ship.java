@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Ship implements Comparable<Ship>{
 
-    Owner Owner = new Owner("Bob", "Cunt", "Freierstrasse 10");
+    Owner Owner = new Owner("Bob", "Cunt", "Freierstrasse 17");
     Random r = new Random();
 
     private String name;

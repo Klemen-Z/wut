@@ -30,6 +30,7 @@ public class Race implements Comparable<Ship>{
         ShipNames.add("Vampire II");
         ShipNames.add("Puerto Rico");
         ShipNames.add("Conqueror");
+        ShipNames.add("Xi Jing Ping");
     }
 
     public void getAllShips(){
@@ -68,7 +69,8 @@ public class Race implements Comparable<Ship>{
 
     public void generateShips(){
         int i = 1;
-        while (i < 6){
+        int b = ShipNames.size() + 1;
+        while (i < b){
             Ships.put(i, new Ship(i, namePick()));
             i++;
         }
