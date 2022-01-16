@@ -16,11 +16,11 @@ public class Time {
     public void generateTimes(int amount){
         int i = 0;
         while(i < amount){
-            times.put(i, new Time12((r.nextInt(23) + 1), r.nextInt(60)));
+            times.put(i, new Time12((r.nextInt(23) + 1), r.nextInt(59)));
             i++;
         }
         while(i < (amount * 2)){
-            times.put(i, new Time24((r.nextInt(23) + 1), r.nextInt(60)));
+            times.put(i, new Time24(r.nextInt(23), r.nextInt(59)));
             i++;
         }
     }

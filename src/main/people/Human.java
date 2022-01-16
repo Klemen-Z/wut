@@ -7,6 +7,7 @@ public abstract class Human {
     String firstName;
     String lastName;
 
+
     Human(int Age,int Height,int Weight,String FirstName, String LastName){
         setAge(Age);
         setHeight(Height);
