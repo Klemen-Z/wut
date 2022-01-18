@@ -57,7 +57,5 @@ public abstract class Human {
         this.lastName = lastName;
     }
 
-    public void dispStats(){
-        System.out.println("Age: " + getAge() + "\nheight: " + getHeight() + "\nWeight: " + getWeight() + "\nname: " + getFirstName() + " " + getLastName());
-    }
+    abstract void dispStats();
 }
