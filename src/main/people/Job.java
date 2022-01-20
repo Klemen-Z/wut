@@ -64,9 +64,9 @@ public class Job {
 
     void getJob() {
         if (this.fullTime){
-            System.out.println("Job: " + getJobName() + ", Salary: " + calcSalary() + "Full-Time");
+            System.out.println("Job: " + getJobName() + ", Salary (per hour): " + calcSalary() + " Full-Time");
         } else {
-            System.out.println("Job: " + getJobName() + ", Salary: " + calcSalary() + " Part-Time");
+            System.out.println("Job: " + getJobName() + ", Salary (per hour): " + calcSalary() + " Part-Time");
         }
     }
 }
