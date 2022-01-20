@@ -1,4 +1,4 @@
-package main.people.clothes;
+package main.clothes;
 
 public abstract class Clothes {
     int size;

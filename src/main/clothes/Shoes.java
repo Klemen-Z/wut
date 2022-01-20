@@ -1,8 +1,8 @@
-package main.people.clothes;
+package main.clothes;
 
-public class Pants extends Clothes{
+public class Shoes extends Clothes{
 
-    Pants(int Size, String Brand, String Type) {
+    Shoes(int Size, String Brand, String Type) {
         super(Size, Brand, Type);
     }
 
