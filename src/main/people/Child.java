@@ -1,7 +1,5 @@
 package main.people;
 
-import javax.swing.text.Position;
-
 public class Child  extends Human{
     Child(int Age, int Height, int Weight, String FirstName, String LastName, String Job_Name, String Position, int Salary, double Multiplier, boolean fullTime) {
         super(Age, Height, Weight, FirstName, LastName);
