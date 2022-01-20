@@ -21,12 +21,12 @@ public abstract class Human {
         return age;
     }
 
-    public int getHeight() {
-        return height;
+    public String getHeight() {
+        return height + "cm";
     }
 
-    public int getWeight() {
-        return weight;
+    public String getWeight() {
+        return weight + "kg";
     }
 
     public String getFirstName() {
