@@ -11,7 +11,7 @@ public class DB_Main {
         System.out.println("type host name (case sensitive): ");
         String host = sc1.nextLine();
 
-        System.out.println("type access port (case sensitive): ");
+        System.out.println("type access port: ");
         String port = sc1.nextLine();
 
         System.out.println("type database language (case sensitive): ");
