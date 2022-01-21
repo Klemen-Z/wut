@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.sql.*;
 
 public class databaseAccess {
+
     private String user;
     private String database;
     private String host;
@@ -11,6 +12,7 @@ public class databaseAccess {
     private String command;
     private String url;
     private int port;
+
 
     Scanner sc1 = new Scanner(System.in);
 
@@ -20,19 +22,17 @@ public class databaseAccess {
         setPassword(password);
         setUser(user);
         setPort(port);
-        setUrl("jdbc:" + DBLang + "://" + this.host + ":" + this.port + "/");
+        setUrl("jdbc:" + DBLang + "://" + this.host + ":" + this.port + "/" + this.database + "?autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true");
         try {
-
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
 
             Connection connector = DriverManager.getConnection(this.url, this.user, this.password);
 
             Statement statement = connector.createStatement();
-            statement.execute("USE " + this.database);
 
             while (true) {
                 System.out.println("Type in a MySQL command: ");
                 setCommand(sc1.nextLine());
+                sc1.reset();
                 if (this.command.equalsIgnoreCase("stop")) {
                     statement.close();
                     connector.close();
@@ -49,7 +49,7 @@ public class databaseAccess {
                     results.close();
                 }
             }
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

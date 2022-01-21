@@ -12,7 +12,7 @@ public class DB_Main {
         String host = sc1.nextLine();
 
         System.out.println("type access port (case sensitive): ");
-        int port = sc1.nextInt();
+        String port = sc1.nextLine();
 
         System.out.println("type database language (case sensitive): ");
         String DB_Lang = sc1.nextLine();
@@ -26,7 +26,10 @@ public class DB_Main {
         System.out.println("type password (case sensitive): ");
         String password = sc1.nextLine();
 
-        databaseAccess DB_boi = new databaseAccess( DB, host, username, password, port, DB_Lang);
-    }
+        if (password == null){
+            password = "";
+        }
 
+        databaseAccess DB_boi = new databaseAccess( DB, host, username, password, Integer.parseInt(port), DB_Lang);
+    }
 }
