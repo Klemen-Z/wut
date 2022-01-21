@@ -9,6 +9,6 @@ public class Main_Human {
         System.out.println(" ");
         Adult Andrea = new Adult(23, 175, 80, "Andrea", "Weissman", "SoftwareBuilders.ltd", "Project Manager", 25, 1.5, true);
         System.out.println(" ");
-        Senior Hazel = new Senior(80, 175, 85, "Hazel", "", "Unemployment benefits / Pension", "Retiree", 20, 1, true);
+        Senior Hazel = new Senior(80, 175, 85, "Hazel", "Willman", "Unemployment benefits / Pension", "Retiree", 20, 1, true);
     }
 }
