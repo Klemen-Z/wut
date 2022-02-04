@@ -2,7 +2,7 @@ package com.main.ship_race;
 
 import java.util.*;
 
-public class Race implements Comparable<Ship>{
+public class Race{
 
     Random r = new Random();
 
@@ -82,10 +82,5 @@ public class Race implements Comparable<Ship>{
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Override
-    public int compareTo(Ship o) {
-        return 0;
     }
 }
