@@ -54,24 +54,11 @@ public class Race{
             i++;
         }
     }
-    public String namePick(){
-        String name;
-        int index;
-        if (ShipNames.size() > 1){
-            index = r.nextInt(ShipNames.size() - 1);
-        } else{
-            index = 0;
-        }
-        name = ShipNames.get(index);
-        ShipNames.remove(index);
-        return name;
-    }
 
     public void generateShips(){
         int i = 1;
-        int b = ShipNames.size() + 1;
-        while (i < b){
-            Ships.put(i, new Ship(i, namePick()));
+        for (String name : ShipNames){
+            Ships.put(i, new Ship(i, name);
             i++;
         }
     }
