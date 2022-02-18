@@ -4,8 +4,6 @@ import java.util.*;
 
 public class Race{
 
-    Random r = new Random();
-
     private String name;
 
     ArrayList<String> ShipNames = new ArrayList<>();
@@ -58,7 +56,7 @@ public class Race{
     public void generateShips(){
         int i = 1;
         for (String name : ShipNames){
-            Ships.put(i, new Ship(i, name);
+            Ships.put(i, new Ship(i, name));
             i++;
         }
     }
